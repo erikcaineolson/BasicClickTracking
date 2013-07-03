@@ -13,8 +13,8 @@
 	$filedir = NULL;
 	$filename = NULL;
 	$logstr = NULL;
-			$params = NULL;
-			$redir = NULL;
+	$params = NULL;
+	$redir = NULL;
 
 	$filedir = 'TRACKING_FILE_DIRECTORY';
 
@@ -29,15 +29,15 @@
 	isset($_REQUEST['s5']) ? $params['s5'] = $_REQUEST['s5'] : $params['s5'] = '';
 
 	if(is_dir($filedir)){
-			$logstr = date('Y-m-d H:i:s') . '|' . $_SERVER['REMOTE_ADDR'] . '|' . $params['e'] . '|' . $params['a'] . '|' . $params['s1'] . '|' . $params['s2'] . '|' . $params['s3'] . '|' . $params['s4'] . '|' . $params['s5'] . '|' . $params['r'] . "\n";
+		$logstr = date('Y-m-d H:i:s') . '|' . $_SERVER['REMOTE_ADDR'] . '|' . $params['e'] . '|' . $params['a'] . '|' . $params['s1'] . '|' . $params['s2'] . '|' . $params['s3'] . '|' . $params['s4'] . '|' . $params['s5'] . '|' . $params['r'] . "\n";
 
-			$fh = fopen($filedir . $filename, 'a');
-			fwrite($fh, $logstr);
-			fclose($fh);
+		$fh = fopen($filedir . $filename, 'a');
+		fwrite($fh, $logstr);
+		fclose($fh);
 	}
 
 			$redir = array('REDIRECT_1' => 'URL_1',
 						   'REDIRECT_2' => 'URL_2');
 
-	header('Location: ' . $redir[$_REQUEST['r']] . '?AFFID=' . $params['a']);
+	header('Location: ' . $redir[$_REQUEST['r']]);
 ?>
