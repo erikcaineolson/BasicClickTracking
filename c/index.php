@@ -5,7 +5,7 @@
 	|	file which you can later parse however you see		|
 	|	fit. Takes up to 8 parameters: r, a, e, and s1-s5	|
 	|	r is the only required parameter. See the README	|
-	|	and HOWTO for more information.						|
+	|	and SETUP for more information.						|
 	|														|
 	\*******************************************************/
 

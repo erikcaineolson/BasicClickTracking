@@ -17,7 +17,7 @@ Nothing requires the use of the "c" directory, you may omit it.
     2. You'll need to set values for your redirect URIs. These are set beginning on line 39 in the $redir array. You will need to provide "alias" values as well as the URIs (this prevents you from having to pass an entire URI as a parameter).
     
     3. If you want to append the optional parameters to your redirect URL, I recommend you do so in the header() function call (or preset a variable). This will result in cleaner code (and a smaller file). 
-    Ex: header('Location: ' . $redir[$_REQUEST['r']] . ' ?a=' . $params['a'] . '&s1=' . $params['s1'];
+       Ex: header('Location: ' . $redir[$_REQUEST['r']] . ' ?a=' . $params['a'] . '&s1=' . $params['s1'];
     
 
 *Gotchas*
